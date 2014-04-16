@@ -11,5 +11,10 @@
 @interface DCAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (strong) IBOutlet NSWindow *aboutBox;
+@property (strong) IBOutlet NSWindow *prefPane;
+- (IBAction)showAboutBox:(id)sender;
+- (IBAction)showPreference:(id)sender;
+
 
 @end

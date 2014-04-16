@@ -18,6 +18,8 @@
 		D309D09018FDF2DB007AC290 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D309D06F18FDF2DB007AC290 /* Cocoa.framework */; };
 		D309D09818FDF2DB007AC290 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D309D09618FDF2DB007AC290 /* InfoPlist.strings */; };
 		D309D09A18FDF2DB007AC290 /* DockClockXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D309D09918FDF2DB007AC290 /* DockClockXTests.m */; };
+		D35F2C9A18FDF3CF00182F5D /* AboutBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F2C9918FDF3CF00182F5D /* AboutBox.xib */; };
+		D35F2C9C18FEA14900182F5D /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F2C9B18FEA14900182F5D /* Preferences.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		D309D09518FDF2DB007AC290 /* DockClockXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DockClockXTests-Info.plist"; sourceTree = "<group>"; };
 		D309D09718FDF2DB007AC290 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D309D09918FDF2DB007AC290 /* DockClockXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DockClockXTests.m; sourceTree = "<group>"; };
+		D35F2C9918FDF3CF00182F5D /* AboutBox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutBox.xib; sourceTree = "<group>"; };
+		D35F2C9B18FEA14900182F5D /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +122,10 @@
 				D309D08118FDF2DB007AC290 /* DCAppDelegate.h */,
 				D309D08218FDF2DB007AC290 /* DCAppDelegate.m */,
 				D309D08418FDF2DB007AC290 /* MainMenu.xib */,
+				D35F2C9918FDF3CF00182F5D /* AboutBox.xib */,
 				D309D08718FDF2DB007AC290 /* Images.xcassets */,
 				D309D07618FDF2DB007AC290 /* Supporting Files */,
+				D35F2C9B18FEA14900182F5D /* Preferences.xib */,
 			);
 			path = DockClockX;
 			sourceTree = "<group>";
@@ -233,7 +239,9 @@
 			files = (
 				D309D07A18FDF2DB007AC290 /* InfoPlist.strings in Resources */,
 				D309D08818FDF2DB007AC290 /* Images.xcassets in Resources */,
+				D35F2C9A18FDF3CF00182F5D /* AboutBox.xib in Resources */,
 				D309D08018FDF2DB007AC290 /* Credits.rtf in Resources */,
+				D35F2C9C18FEA14900182F5D /* Preferences.xib in Resources */,
 				D309D08618FDF2DB007AC290 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +475,7 @@
 				D309D09F18FDF2DB007AC290 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D309D0A018FDF2DB007AC290 /* Build configuration list for PBXNativeTarget "DockClockXTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +484,7 @@
 				D309D0A218FDF2DB007AC290 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

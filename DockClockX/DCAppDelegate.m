@@ -15,4 +15,19 @@
     // Insert code here to initialize your application
 }
 
+- (IBAction)showAboutBox:(id)sender {
+    
+    if (self.aboutBox == NULL) {
+        [[NSBundle mainBundle] loadNibNamed:@"AboutBox" owner:self topLevelObjects:NULL];
+    }
+    [self.aboutBox makeKeyAndOrderFront:self];
+}
+
+- (IBAction)showPreference:(id)sender {
+    if (self.prefPane == NULL) {
+        [[NSBundle mainBundle] loadNibNamed:@"Preferences" owner:self topLevelObjects:NULL];
+    }
+    [self.prefPane makeKeyAndOrderFront:self];
+}
+
 @end
