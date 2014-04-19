@@ -7,14 +7,18 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DCClockView.h"
 
 @interface DCAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (strong) IBOutlet NSWindow *aboutBox;
 @property (strong) IBOutlet NSWindow *prefPane;
+@property (strong) NSMenu *dockMenu;
+@property (readonly) DCClockView *currentClock;
+
 - (IBAction)showAboutBox:(id)sender;
 - (IBAction)showPreference:(id)sender;
 
-
 @end
+

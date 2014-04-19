@@ -20,6 +20,14 @@
 		D309D09A18FDF2DB007AC290 /* DockClockXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D309D09918FDF2DB007AC290 /* DockClockXTests.m */; };
 		D35F2C9A18FDF3CF00182F5D /* AboutBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F2C9918FDF3CF00182F5D /* AboutBox.xib */; };
 		D35F2C9C18FEA14900182F5D /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F2C9B18FEA14900182F5D /* Preferences.xib */; };
+		D3C4E77318FF5FE5002984DF /* DCClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C4E77218FF5FE5002984DF /* DCClockView.m */; };
+		D3D0F34E18FF7B58006382EB /* LED.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3D0F34D18FF7B58006382EB /* LED.ttf */; };
+		D3D0F35018FF7BC3006382EB /* BlackClock.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D0F34F18FF7BC3006382EB /* BlackClock.png */; };
+		D3D0F35418FF7CCA006382EB /* NSFont_Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D0F35318FF7CCA006382EB /* NSFont_Additions.m */; };
+		D3D0F35718FFF5E5006382EB /* DCBasicDigitalClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D0F35618FFF5E5006382EB /* DCBasicDigitalClockView.m */; };
+		D3D0F359190214DA006382EB /* LiquidCrystal-ExBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3D0F358190214DA006382EB /* LiquidCrystal-ExBold.otf */; };
+		D3D0F35E19021C28006382EB /* NSColor+ColorExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D0F35D19021C28006382EB /* NSColor+ColorExtentions.m */; };
+		D3D0F36119022A24006382EB /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D0F36019022A24006382EB /* NSDate+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +62,19 @@
 		D309D09918FDF2DB007AC290 /* DockClockXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DockClockXTests.m; sourceTree = "<group>"; };
 		D35F2C9918FDF3CF00182F5D /* AboutBox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutBox.xib; sourceTree = "<group>"; };
 		D35F2C9B18FEA14900182F5D /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		D3C4E77118FF5FE5002984DF /* DCClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClockView.h; sourceTree = "<group>"; };
+		D3C4E77218FF5FE5002984DF /* DCClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClockView.m; sourceTree = "<group>"; };
+		D3D0F34D18FF7B58006382EB /* LED.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LED.ttf; sourceTree = "<group>"; };
+		D3D0F34F18FF7BC3006382EB /* BlackClock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackClock.png; sourceTree = "<group>"; };
+		D3D0F35218FF7CCA006382EB /* NSFont_Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFont_Additions.h; sourceTree = "<group>"; };
+		D3D0F35318FF7CCA006382EB /* NSFont_Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFont_Additions.m; sourceTree = "<group>"; };
+		D3D0F35518FFF5E5006382EB /* DCBasicDigitalClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBasicDigitalClockView.h; sourceTree = "<group>"; };
+		D3D0F35618FFF5E5006382EB /* DCBasicDigitalClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBasicDigitalClockView.m; sourceTree = "<group>"; };
+		D3D0F358190214DA006382EB /* LiquidCrystal-ExBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LiquidCrystal-ExBold.otf"; sourceTree = "<group>"; };
+		D3D0F35C19021C28006382EB /* NSColor+ColorExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+ColorExtentions.h"; sourceTree = "<group>"; };
+		D3D0F35D19021C28006382EB /* NSColor+ColorExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+ColorExtentions.m"; sourceTree = "<group>"; };
+		D3D0F35F19022A24006382EB /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
+		D3D0F36019022A24006382EB /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +142,10 @@
 			children = (
 				D309D08118FDF2DB007AC290 /* DCAppDelegate.h */,
 				D309D08218FDF2DB007AC290 /* DCAppDelegate.m */,
+				D3D0F35518FFF5E5006382EB /* DCBasicDigitalClockView.h */,
+				D3D0F35618FFF5E5006382EB /* DCBasicDigitalClockView.m */,
+				D3C4E77118FF5FE5002984DF /* DCClockView.h */,
+				D3C4E77218FF5FE5002984DF /* DCClockView.m */,
 				D309D08418FDF2DB007AC290 /* MainMenu.xib */,
 				D35F2C9918FDF3CF00182F5D /* AboutBox.xib */,
 				D309D08718FDF2DB007AC290 /* Images.xcassets */,
@@ -133,11 +158,19 @@
 		D309D07618FDF2DB007AC290 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D3D0F35F19022A24006382EB /* NSDate+Additions.h */,
+				D3D0F36019022A24006382EB /* NSDate+Additions.m */,
+				D3D0F35B19021B30006382EB /* Fonts */,
+				D3D0F35218FF7CCA006382EB /* NSFont_Additions.h */,
+				D3D0F35318FF7CCA006382EB /* NSFont_Additions.m */,
+				D3D0F35118FF7BD0006382EB /* Images */,
 				D309D07718FDF2DB007AC290 /* DockClockX-Info.plist */,
 				D309D07818FDF2DB007AC290 /* InfoPlist.strings */,
 				D309D07B18FDF2DB007AC290 /* main.m */,
 				D309D07D18FDF2DB007AC290 /* DockClockX-Prefix.pch */,
 				D309D07E18FDF2DB007AC290 /* Credits.rtf */,
+				D3D0F35C19021C28006382EB /* NSColor+ColorExtentions.h */,
+				D3D0F35D19021C28006382EB /* NSColor+ColorExtentions.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -158,6 +191,23 @@
 				D309D09618FDF2DB007AC290 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3D0F35118FF7BD0006382EB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D3D0F34F18FF7BC3006382EB /* BlackClock.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		D3D0F35B19021B30006382EB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D3D0F34D18FF7B58006382EB /* LED.ttf */,
+				D3D0F358190214DA006382EB /* LiquidCrystal-ExBold.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +287,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3D0F34E18FF7B58006382EB /* LED.ttf in Resources */,
 				D309D07A18FDF2DB007AC290 /* InfoPlist.strings in Resources */,
+				D3D0F359190214DA006382EB /* LiquidCrystal-ExBold.otf in Resources */,
+				D3D0F35018FF7BC3006382EB /* BlackClock.png in Resources */,
 				D309D08818FDF2DB007AC290 /* Images.xcassets in Resources */,
 				D35F2C9A18FDF3CF00182F5D /* AboutBox.xib in Resources */,
 				D309D08018FDF2DB007AC290 /* Credits.rtf in Resources */,
@@ -261,8 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C4E77318FF5FE5002984DF /* DCClockView.m in Sources */,
 				D309D07C18FDF2DB007AC290 /* main.m in Sources */,
 				D309D08318FDF2DB007AC290 /* DCAppDelegate.m in Sources */,
+				D3D0F35E19021C28006382EB /* NSColor+ColorExtentions.m in Sources */,
+				D3D0F36119022A24006382EB /* NSDate+Additions.m in Sources */,
+				D3D0F35418FF7CCA006382EB /* NSFont_Additions.m in Sources */,
+				D3D0F35718FFF5E5006382EB /* DCBasicDigitalClockView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
