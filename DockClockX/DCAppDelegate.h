@@ -17,6 +17,7 @@
 @property (strong) NSMenu *dockMenu;
 @property (readonly) DCClockView *currentClock;
 
+
 - (IBAction)showAboutBox:(id)sender;
 - (IBAction)showPreference:(id)sender;
 

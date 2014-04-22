@@ -13,7 +13,7 @@
 - (void)startTimer {
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:[self timeInterval] target:[NSApp dockTile] selector:@selector(display) userInfo:nil repeats:YES];
-    [self.timer setTolerance:[self timeInterval]];
+    [self.timer setTolerance:.25];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     
 }

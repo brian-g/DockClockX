@@ -14,7 +14,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    NSRect r = { { 0, 0 }, { 256, 256 } };
+//    NSDictionary defaults = [NSDictionary dictionaryWithObjectsAndKeys:<#(id), ...#>, nil]
+    NSRect r = { { 0, 0 }, { 0, 0 } };
+
+//    [[NSUserDefaults standardUserDefaults] registerDefaults:<#(NSDictionary *)#>
     
     r.size = [[NSApp dockTile] size];
     DCClockView *c = [[DCBasicDigitalClockView alloc] initWithFrame:r];
@@ -22,9 +25,8 @@
     [self changeClock:c];
 }
 
-- (void)windowDidClose:(NSNotification *)aNotification
+- (void)windowWillClose:(NSNotification *)aNotification
 {
-    if ([aNotification ])
 
 }
 
@@ -35,7 +37,6 @@
         
         newItem = [[NSMenuItem alloc] initWithTitle:@"Clock" action:nil keyEquivalent:@""];
 
-            
         self.dockMenu = [[NSMenu alloc] init];
         [self.dockMenu addItem:newItem];
     }
@@ -43,7 +44,6 @@
 }
 
 - (IBAction)showAboutBox:(id)sender {
-    
     if (self.aboutBox == NULL) {
         [[NSBundle mainBundle] loadNibNamed:@"AboutBox" owner:self topLevelObjects:NULL];
     }
@@ -55,6 +55,7 @@
         [[NSBundle mainBundle] loadNibNamed:@"Preferences" owner:self topLevelObjects:NULL];
     }
     [self.prefPane makeKeyAndOrderFront:self];
+
 }
 
 - (void)changeClock:(DCClockView *)clock {

@@ -16,10 +16,11 @@
     
     scanner = [NSScanner scannerWithString:hexColor];
     [scanner setCharactersToBeSkipped:[NSCharacterSet characterSetWithCharactersInString:@"#"]];
-    if ([scanner scanHexInt:&color])
+    if ([scanner scanHexInt:&color]) {
         return [self colorFromInt:color];
-    else
-        return [self blackColor];
+    }
+    
+    return [self blackColor];
 }
 
 + (NSColor *)colorFromInt:(unsigned int)color {
