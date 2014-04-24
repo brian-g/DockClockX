@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "NSDate+Additions.h"
+
 @interface DCClockView : NSView
 
 @property (readonly) NSImage *clockImage;

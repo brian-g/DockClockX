@@ -13,6 +13,7 @@
 
 #define LEDCOLOR @"63f8b8"
 #define LEDFONT @"LED"
+#define BOXPADDING 10
 
 NSFont __strong *_ledFont;
 NSFont __strong *_ampmFont;
@@ -43,24 +44,38 @@ NSDateFormatter __strong *_formatter;
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-    NSString *time;
-    NSPoint p = { -8 , 20 };
+    BOOL    is24hour = NO;
+    BOOL    drawBox = YES;
+    
     NSDate *d = [NSDate date];
-    CGFloat capHeight;
-    NSRect boundingRect;
     int hour = [d hour];
-    NSString *ampm;
+    NSString *ampm = (hour > 12) ? [_formatter PMSymbol] : [_formatter AMSymbol];
     
-    ampm = (hour > 12) ? [_formatter PMSymbol] : [_formatter AMSymbol];
-    hour = ((hour == 0 || hour == 12) ? 12 : hour % 12);
+    // Convert to 12 hour time
+    if (is24hour == NO) {
+        hour = ((hour == 0 || hour == 12) ? 12 : hour % 12);
+    }
+
+    // Format the string
+    NSString *time = [NSString stringWithFormat:@"%d %.2d", hour, [d minute]];
     
-    time = [NSString stringWithFormat:@"%d %.2d", hour, [d minute]];
-    
-    capHeight = [_ledFont capHeight];
-    boundingRect = [_ledFont boundingRectForGlyph:'0'];
+    // Get some font stuff
+    CGFloat capHeight = [_ledFont capHeight];
+    NSRect boundingRect = [_ledFont boundingRectForGlyph:'0'];
     
     [super drawRect:dirtyRect];
 
+    if (drawBox == YES) {
+        NSRect boxRect = {
+            { 0, self.bounds.size.height / 2 - ( capHeight / 2) - BOXPADDING },
+            { self.bounds.size.width, capHeight + ( 2 * BOXPADDING )}
+        };
+        
+        [[NSColor colorFromHexString:@"#333333"] set];
+        NSRectFill(boxRect);
+    }
+    
+    NSPoint p = { -8 , 0 };
     p.y = (self.bounds.size.height / 2) - ( capHeight / 2) + [_ledFont descender];
     if (hour < 10) {
         p.x = 15;    // Adjustment for single digit hour
@@ -79,15 +94,14 @@ NSDateFormatter __strong *_formatter;
         NSRectFill(r);
     }
 
+    // Draw AM/PM
     p.x = 96;
-
     if ([d hour] > 12) {
         p.y = p.y + 5;  // PM
     }
     else {
         p.y = p.y + (capHeight / 2) + 5;
     }
-
     [ampm drawAtPoint:p withAttributes:_ampmAttr];
 }
 

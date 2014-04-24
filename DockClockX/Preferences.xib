@@ -4,11 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="DCAppDelegate" customClass="DCPrefController" colorLabel="IBBuiltInLabel-Red">
-            <connections>
-                <outlet property="prefPane" destination="QvC-M9-y7g" id="Lzj-DQ-yZX"/>
-            </connections>
-        </customObject>
+        <customObject id="-2" userLabel="DCAppDelegate" customClass="DCPrefController" colorLabel="IBBuiltInLabel-Red"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application"/>
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="QvC-M9-y7g">
@@ -26,43 +22,35 @@
                         <tabViewItems>
                             <tabViewItem label="Clock" identifier="1" id="hHi-Fd-tKa">
                                 <view key="view" ambiguous="YES" id="b7e-FQ-laR">
-                                    <rect key="frame" x="10" y="33" width="138" height="0.0"/>
+                                    <rect key="frame" x="10" y="33" width="534" height="323"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJ7-mV-hz3">
-                                            <rect key="frame" x="17" y="-306" width="234" height="303"/>
+                                        <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qF-WQ-Ee8">
+                                            <rect key="frame" x="17" y="17" width="128" height="303"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <clipView key="contentView" ambiguous="YES" misplaced="YES" id="GtP-VU-eGp">
-                                                <rect key="frame" x="1" y="1" width="232" height="301"/>
+                                            <clipView key="contentView" ambiguous="YES" misplaced="YES" id="t67-GZ-8WC">
+                                                <rect key="frame" x="1" y="1" width="126" height="301"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <collectionView ambiguous="YES" id="R2g-dv-OUb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="232" height="301"/>
+                                                    <collectionView ambiguous="YES" id="f4q-u6-BhS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="126" height="301"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <connections>
-                                                            <outlet property="itemPrototype" destination="XZG-yW-k2s" id="iQv-mY-gU7"/>
+                                                            <outlet property="itemPrototype" destination="Oqb-HU-me5" id="hm2-nT-F1C"/>
                                                         </connections>
                                                     </collectionView>
                                                 </subviews>
                                             </clipView>
-                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="n3M-du-23U">
+                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="TPB-ZO-r9U">
                                                 <rect key="frame" x="1" y="144" width="233" height="15"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
-                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="IhQ-je-Gjm">
+                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="CEs-Hx-EhU">
                                                 <rect key="frame" x="234" y="1" width="15" height="143"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                         </scrollView>
-                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9dY-5a-QSz">
-                                            <rect key="frame" x="263" y="-66" width="110" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Show seconds" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="733-V8-SVV">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -107,9 +95,6 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="469" height="190"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        <connections>
-                                                            <outlet property="itemPrototype" destination="Tep-aG-piV" id="fIG-BI-1IT"/>
-                                                        </connections>
                                                     </collectionView>
                                                 </subviews>
                                             </clipView>
@@ -129,8 +114,34 @@
                     </tabView>
                 </subviews>
             </view>
+            <connections>
+                <binding destination="-3" name="representedFilename" keyPath="self.prefPane" id="KIK-bu-4FM"/>
+            </connections>
         </window>
-        <collectionViewItem id="XZG-yW-k2s"/>
-        <collectionViewItem id="Tep-aG-piV"/>
+        <collectionViewItem id="Oqb-HU-me5">
+            <connections>
+                <outlet property="view" destination="34v-7i-NgV" id="BCf-K1-axn"/>
+            </connections>
+        </collectionViewItem>
+        <view id="34v-7i-NgV">
+            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yho-6J-Os4">
+                    <rect key="frame" x="0.0" y="28" width="100" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="mTS-26-HX8"/>
+                    <connections>
+                        <binding destination="Oqb-HU-me5" name="editable" keyPath="representedObject.image" id="Hfm-rD-X5Z"/>
+                    </connections>
+                </imageView>
+            </subviews>
+        </view>
+        <arrayController id="3MZ-Bs-2Dv">
+            <connections>
+                <binding destination="-2" name="editable" keyPath="clocks" id="fKr-Dc-c52"/>
+            </connections>
+        </arrayController>
+        <userDefaultsController representsSharedInstance="YES" id="phn-uj-luO"/>
     </objects>
 </document>

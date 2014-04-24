@@ -18,8 +18,12 @@
 		D309D09018FDF2DB007AC290 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D309D06F18FDF2DB007AC290 /* Cocoa.framework */; };
 		D309D09818FDF2DB007AC290 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D309D09618FDF2DB007AC290 /* InfoPlist.strings */; };
 		D309D09A18FDF2DB007AC290 /* DockClockXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D309D09918FDF2DB007AC290 /* DockClockXTests.m */; };
+		D3581ACC19088CB500B62397 /* BlackClock.pxm in Resources */ = {isa = PBXBuildFile; fileRef = D3581ACB19088CB500B62397 /* BlackClock.pxm */; };
+		D3581ACE19088D2600B62397 /* BlackClock.png in Resources */ = {isa = PBXBuildFile; fileRef = D3581ACD19088D2600B62397 /* BlackClock.png */; };
+		D3581AD119088D4E00B62397 /* DCBlackClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3581AD019088D4E00B62397 /* DCBlackClockView.m */; };
 		D35F2C9A18FDF3CF00182F5D /* AboutBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F2C9918FDF3CF00182F5D /* AboutBox.xib */; };
 		D35F2C9C18FEA14900182F5D /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F2C9B18FEA14900182F5D /* Preferences.xib */; };
+		D3962AA419068B8C00093966 /* DCBasicDigitalClockPref.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3962AA319068B8C00093966 /* DCBasicDigitalClockPref.xib */; };
 		D3C4E77318FF5FE5002984DF /* DCClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C4E77218FF5FE5002984DF /* DCClockView.m */; };
 		D3D0F34E18FF7B58006382EB /* LED.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3D0F34D18FF7B58006382EB /* LED.ttf */; };
 		D3D0F35018FF7BC3006382EB /* BlackClock.png in Resources */ = {isa = PBXBuildFile; fileRef = D3D0F34F18FF7BC3006382EB /* BlackClock.png */; };
@@ -60,8 +64,13 @@
 		D309D09518FDF2DB007AC290 /* DockClockXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DockClockXTests-Info.plist"; sourceTree = "<group>"; };
 		D309D09718FDF2DB007AC290 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D309D09918FDF2DB007AC290 /* DockClockXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DockClockXTests.m; sourceTree = "<group>"; };
+		D3581ACB19088CB500B62397 /* BlackClock.pxm */ = {isa = PBXFileReference; lastKnownFileType = file; path = BlackClock.pxm; sourceTree = "<group>"; };
+		D3581ACD19088D2600B62397 /* BlackClock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackClock.png; sourceTree = "<group>"; };
+		D3581ACF19088D4E00B62397 /* DCBlackClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBlackClockView.h; sourceTree = "<group>"; };
+		D3581AD019088D4E00B62397 /* DCBlackClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBlackClockView.m; sourceTree = "<group>"; };
 		D35F2C9918FDF3CF00182F5D /* AboutBox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutBox.xib; sourceTree = "<group>"; };
 		D35F2C9B18FEA14900182F5D /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		D3962AA319068B8C00093966 /* DCBasicDigitalClockPref.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCBasicDigitalClockPref.xib; sourceTree = "<group>"; };
 		D3C4E77118FF5FE5002984DF /* DCClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClockView.h; sourceTree = "<group>"; };
 		D3C4E77218FF5FE5002984DF /* DCClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCClockView.m; sourceTree = "<group>"; };
 		D3D0F34D18FF7B58006382EB /* LED.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LED.ttf; sourceTree = "<group>"; };
@@ -142,8 +151,8 @@
 			children = (
 				D309D08118FDF2DB007AC290 /* DCAppDelegate.h */,
 				D309D08218FDF2DB007AC290 /* DCAppDelegate.m */,
-				D3D0F35518FFF5E5006382EB /* DCBasicDigitalClockView.h */,
-				D3D0F35618FFF5E5006382EB /* DCBasicDigitalClockView.m */,
+				D3581ACA1908880D00B62397 /* BlackClock */,
+				D3962AA219068AC700093966 /* BasicDigitalClock */,
 				D3C4E77118FF5FE5002984DF /* DCClockView.h */,
 				D3C4E77218FF5FE5002984DF /* DCClockView.m */,
 				D309D08418FDF2DB007AC290 /* MainMenu.xib */,
@@ -191,6 +200,27 @@
 				D309D09618FDF2DB007AC290 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3581ACA1908880D00B62397 /* BlackClock */ = {
+			isa = PBXGroup;
+			children = (
+				D3581ACD19088D2600B62397 /* BlackClock.png */,
+				D3581ACB19088CB500B62397 /* BlackClock.pxm */,
+				D3581ACF19088D4E00B62397 /* DCBlackClockView.h */,
+				D3581AD019088D4E00B62397 /* DCBlackClockView.m */,
+			);
+			name = BlackClock;
+			sourceTree = "<group>";
+		};
+		D3962AA219068AC700093966 /* BasicDigitalClock */ = {
+			isa = PBXGroup;
+			children = (
+				D3D0F35518FFF5E5006382EB /* DCBasicDigitalClockView.h */,
+				D3D0F35618FFF5E5006382EB /* DCBasicDigitalClockView.m */,
+				D3962AA319068B8C00093966 /* DCBasicDigitalClockPref.xib */,
+			);
+			name = BasicDigitalClock;
 			sourceTree = "<group>";
 		};
 		D3D0F35118FF7BD0006382EB /* Images */ = {
@@ -289,12 +319,15 @@
 			files = (
 				D3D0F34E18FF7B58006382EB /* LED.ttf in Resources */,
 				D309D07A18FDF2DB007AC290 /* InfoPlist.strings in Resources */,
+				D3581ACC19088CB500B62397 /* BlackClock.pxm in Resources */,
 				D3D0F359190214DA006382EB /* LiquidCrystal-ExBold.otf in Resources */,
 				D3D0F35018FF7BC3006382EB /* BlackClock.png in Resources */,
+				D3962AA419068B8C00093966 /* DCBasicDigitalClockPref.xib in Resources */,
 				D309D08818FDF2DB007AC290 /* Images.xcassets in Resources */,
 				D35F2C9A18FDF3CF00182F5D /* AboutBox.xib in Resources */,
 				D309D08018FDF2DB007AC290 /* Credits.rtf in Resources */,
 				D35F2C9C18FEA14900182F5D /* Preferences.xib in Resources */,
+				D3581ACE19088D2600B62397 /* BlackClock.png in Resources */,
 				D309D08618FDF2DB007AC290 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3581AD119088D4E00B62397 /* DCBlackClockView.m in Sources */,
 				D3C4E77318FF5FE5002984DF /* DCClockView.m in Sources */,
 				D309D07C18FDF2DB007AC290 /* main.m in Sources */,
 				D309D08318FDF2DB007AC290 /* DCAppDelegate.m in Sources */,

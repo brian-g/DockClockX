@@ -9,6 +9,7 @@
 #import "DCAppDelegate.h"
 #import "DCClockView.h"
 #import "DCBasicDigitalClockView.h"
+#import "DCBlackClockView.h"
 
 @implementation DCAppDelegate
 
@@ -20,14 +21,28 @@
 //    [[NSUserDefaults standardUserDefaults] registerDefaults:<#(NSDictionary *)#>
     
     r.size = [[NSApp dockTile] size];
-    DCClockView *c = [[DCBasicDigitalClockView alloc] initWithFrame:r];
+    DCClockView *c = [[DCBlackClockView alloc] initWithFrame:r];
     
     [self changeClock:c];
+
+    // Pause the updates while the screen is a asleep since we can't be seen. 
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(screenDidSleep:) name:NSWorkspaceScreensDidSleepNotification object:nil];
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(screenDidWake:) name:NSWorkspaceScreensDidWakeNotification object:nil];
 }
 
 - (void)windowWillClose:(NSNotification *)aNotification
 {
 
+}
+
+- (void)screenDidSleep:(NSNotification *)aNotification
+{
+    [self.currentClock stopTimer];
+}
+
+- (void)screenDidWake:(NSNotification *)aNotification
+{
+    [self.currentClock startTimer];
 }
 
 - (NSMenu *)applicationDockMenu:(NSApplication *)sender {

@@ -16,6 +16,7 @@
 @property (strong) IBOutlet NSWindow *prefPane;
 @property (strong) NSMenu *dockMenu;
 @property (readonly) DCClockView *currentClock;
+@property (strong) NSMutableArray *clocks;
 
 
 - (IBAction)showAboutBox:(id)sender;
