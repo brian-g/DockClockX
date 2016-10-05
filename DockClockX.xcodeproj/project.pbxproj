@@ -19,7 +19,6 @@
 		D309D09818FDF2DB007AC290 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D309D09618FDF2DB007AC290 /* InfoPlist.strings */; };
 		D309D09A18FDF2DB007AC290 /* DockClockXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D309D09918FDF2DB007AC290 /* DockClockXTests.m */; };
 		D3581ACC19088CB500B62397 /* BlackClock.pxm in Resources */ = {isa = PBXBuildFile; fileRef = D3581ACB19088CB500B62397 /* BlackClock.pxm */; };
-		D3581ACE19088D2600B62397 /* BlackClock.png in Resources */ = {isa = PBXBuildFile; fileRef = D3581ACD19088D2600B62397 /* BlackClock.png */; };
 		D3581AD119088D4E00B62397 /* DCBlackClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3581AD019088D4E00B62397 /* DCBlackClockView.m */; };
 		D35F2C9A18FDF3CF00182F5D /* AboutBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F2C9918FDF3CF00182F5D /* AboutBox.xib */; };
 		D35F2C9C18FEA14900182F5D /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35F2C9B18FEA14900182F5D /* Preferences.xib */; };
@@ -68,6 +67,7 @@
 		D3581ACD19088D2600B62397 /* BlackClock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackClock.png; sourceTree = "<group>"; };
 		D3581ACF19088D4E00B62397 /* DCBlackClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBlackClockView.h; sourceTree = "<group>"; };
 		D3581AD019088D4E00B62397 /* DCBlackClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBlackClockView.m; sourceTree = "<group>"; };
+		D3581AD2190A0FAE00B62397 /* DCClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCClock.h; sourceTree = "<group>"; };
 		D35F2C9918FDF3CF00182F5D /* AboutBox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutBox.xib; sourceTree = "<group>"; };
 		D35F2C9B18FEA14900182F5D /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		D3962AA319068B8C00093966 /* DCBasicDigitalClockPref.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCBasicDigitalClockPref.xib; sourceTree = "<group>"; };
@@ -160,6 +160,7 @@
 				D309D08718FDF2DB007AC290 /* Images.xcassets */,
 				D309D07618FDF2DB007AC290 /* Supporting Files */,
 				D35F2C9B18FEA14900182F5D /* Preferences.xib */,
+				D3581AD2190A0FAE00B62397 /* DCClock.h */,
 			);
 			path = DockClockX;
 			sourceTree = "<group>";
@@ -205,8 +206,8 @@
 		D3581ACA1908880D00B62397 /* BlackClock */ = {
 			isa = PBXGroup;
 			children = (
-				D3581ACD19088D2600B62397 /* BlackClock.png */,
 				D3581ACB19088CB500B62397 /* BlackClock.pxm */,
+				D3581ACD19088D2600B62397 /* BlackClock.png */,
 				D3581ACF19088D4E00B62397 /* DCBlackClockView.h */,
 				D3581AD019088D4E00B62397 /* DCBlackClockView.m */,
 			);
@@ -285,7 +286,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DC;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Brian Glaeske";
 				TargetAttributes = {
 					D309D08C18FDF2DB007AC290 = {
@@ -327,7 +328,6 @@
 				D35F2C9A18FDF3CF00182F5D /* AboutBox.xib in Resources */,
 				D309D08018FDF2DB007AC290 /* Credits.rtf in Resources */,
 				D35F2C9C18FEA14900182F5D /* Preferences.xib in Resources */,
-				D3581ACE19088D2600B62397 /* BlackClock.png in Resources */,
 				D309D08618FDF2DB007AC290 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,13 +425,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -463,14 +469,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -490,6 +501,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DockClockX/DockClockX-Prefix.pch";
 				INFOPLIST_FILE = "DockClockX/DockClockX-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "name.glaeske.brian.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -503,6 +515,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DockClockX/DockClockX-Prefix.pch";
 				INFOPLIST_FILE = "DockClockX/DockClockX-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "name.glaeske.brian.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -524,6 +537,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "DockClockXTests/DockClockXTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "name.glaeske.brian.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -542,6 +556,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DockClockX/DockClockX-Prefix.pch";
 				INFOPLIST_FILE = "DockClockXTests/DockClockXTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "name.glaeske.brian.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

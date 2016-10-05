@@ -9,6 +9,7 @@
 #import "DCBlackClockView.h"
 
 #define RADIUS 5
+#define SECONDHANDCOUNTER 10
 
 @implementation DCBlackClockView
 
@@ -50,7 +51,8 @@ NSShadow __strong *_shadow;
     if (_hourHand == nil) {
         NSPoint pnt = { 0, ([self frame].size.height / 4) };
         
-        [NSBezierPath setDefaultLineJoinStyle:NSRoundLineCapStyle];
+        [NSBezierPath setDefaultLineJoinStyle:NSRoundLineJoinStyle];
+        [NSBezierPath setDefaultLineCapStyle:NSRoundLineCapStyle];
         [NSBezierPath setDefaultLineWidth:0.0];
         
         _hourHand = [NSBezierPath bezierPath];
@@ -68,21 +70,22 @@ NSShadow __strong *_shadow;
         [_minuteHand closePath];
     }
     
-    if (showSeconds && _secondHand == nil) {
+    if (showSeconds == YES && _secondHand == nil) {
         _secondHand = [NSBezierPath bezierPath];
-        [_secondHand moveToPoint:NSMakePoint(0,-10)];
-        [_secondHand appendBezierPathWithArcWithCenter:NSZeroPoint radius:(RADIUS / 2) startAngle:-90 endAngle:90];
-        [_secondHand lineToPoint:NSMakePoint(0, 45)];
-        [_secondHand appendBezierPathWithArcWithCenter:NSZeroPoint radius:(RADIUS / 2) startAngle:90 endAngle:-90];
-        [_secondHand lineToPoint:NSMakePoint(0, -10)];
+        [_secondHand moveToPoint:NSMakePoint(0,-SECONDHANDCOUNTER)];
+        [_secondHand appendBezierPathWithArcWithCenter:NSZeroPoint radius:(RADIUS / 1.5) startAngle:-90 endAngle:90];
+        [_secondHand lineToPoint:NSMakePoint(0, [self frame].size.height / 2 - 10)];
+        [_secondHand appendBezierPathWithArcWithCenter:NSZeroPoint radius:(RADIUS / 1.5) startAngle:90 endAngle:-90];
+        [_secondHand lineToPoint:NSMakePoint(0, -SECONDHANDCOUNTER)];
         [_secondHand closePath];
     }
     
     [super drawRect:dirtyRect];
     
     NSPoint p = { 0, 0 };
-    [_clockImage compositeToPoint:p operation:NSCompositeCopy];
 
+    [_clockImage drawAtPoint:p fromRect:NSZeroRect operation:NSCompositeCopy fraction:1];
+    
     [_transform concat];
 
     [[NSColor blackColor] set];
@@ -98,13 +101,15 @@ NSShadow __strong *_shadow;
     [[pathTransform transformBezierPath:_minuteHand] fill];
 
     // Draw second hand
-    [[NSColor redColor] set];
-    
-    pathTransform = [NSAffineTransform transform];
-    [pathTransform rotateByDegrees:-s];
-    NSBezierPath *_s1 = [pathTransform transformBezierPath:_secondHand];
-    [_s1 fill];
-    [_s1 stroke];
+    if (showSeconds == YES) {
+        [[NSColor redColor] set];
+        
+        pathTransform = [NSAffineTransform transform];
+        [pathTransform rotateByDegrees:-s];
+        NSBezierPath *_s1 = [pathTransform transformBezierPath:_secondHand];
+        [_s1 fill];
+        [_s1 stroke];
+    }
 }
 
 - (NSTimeInterval)timeInterval {

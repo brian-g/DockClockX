@@ -28,6 +28,9 @@
     // Pause the updates while the screen is a asleep since we can't be seen. 
     [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(screenDidSleep:) name:NSWorkspaceScreensDidSleepNotification object:nil];
     [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(screenDidWake:) name:NSWorkspaceScreensDidWakeNotification object:nil];
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(screenDidSleep:) name:NSWorkspaceSessionDidResignActiveNotification object:nil];
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self selector:@selector(screenDidWake:) name:NSWorkspaceSessionDidBecomeActiveNotification object:nil];
+
 }
 
 - (void)windowWillClose:(NSNotification *)aNotification

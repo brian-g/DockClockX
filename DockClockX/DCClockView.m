@@ -23,7 +23,10 @@
 }
 
 - (void)stopTimer {
-    [self.timer invalidate];
+    if (self.timer != nil) {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
 }
 
 @end
